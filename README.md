@@ -6,16 +6,16 @@
 
 # Flight-Engine API Setup
 
-cd Flight-Engine\n
-npm install\n
-npm run dev\n
+cd Flight-Engine  
+npm install  
+npm run dev  
 
 
 
 # Server Setup
 
-Activate the environment
-. venv/bin/activate
-
-Run the application
-python3 server.py
+Activate the environment  
+. venv/bin/activate  
+  
+Run the application  
+python3 server.py  
