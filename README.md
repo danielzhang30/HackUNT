@@ -6,9 +6,9 @@
 
 # Flight-Engine API Setup
 
-cd Flight-Engine
-npm install
-npm run dev
+cd Flight-Engine\n
+npm install\n
+npm run dev\n
 
 
 
