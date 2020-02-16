@@ -1,7 +1,7 @@
 # AirFair
 
 
-Install node js and npm to run the Flight-Engine API
+```Install node js and npm to run the Flight-Engine API```
 
 
 Flight-Engine API Setup
