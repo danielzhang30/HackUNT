@@ -15,7 +15,9 @@ npm run dev
 # Server Setup
 
 Activate the environment  
+  
 . venv/bin/activate  
   
 Run the application  
+  
 python3 server.py  
