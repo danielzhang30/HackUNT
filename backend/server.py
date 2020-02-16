@@ -1,9 +1,11 @@
+# import Python modules
 import requests
 from datetime import date
 
 from flask import Flask, jsonify
 app = Flask(__name__)
 
+# route HTTP request to 'get_flights()' function
 @app.route('/get_flights')
 def get_flights():
 	# api-endpoint
@@ -13,7 +15,7 @@ def get_flights():
 	today = date.today().strftime("%Y-%m-%d")
 
 	#parameters (hard-coded for now)
-	PARAMS = {'date':today, 'origin':"DFW", 'destination':"ONT"}
+	PARAMS = {'date':today, 'origin':"DFW"}
 
 	# sending get request and saving the response object
 	r = requests.get(url = URL, params = PARAMS)
@@ -21,12 +23,9 @@ def get_flights():
 	# extracting data in json format
 	data = r.json()
 
-
-
 	return jsonify(data)
 
-
-
+# route HTTP request to 'get_hotels()' function
 @app.route('/get_hotels')
 def get_hotels():
 	URL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json"
@@ -44,3 +43,6 @@ def get_hotels():
 	data = r.json()
 
 	return jsonify(data)
+
+if __name__ == '__main__':
+    app.run(host = "0.0.0.0", port=5001)
